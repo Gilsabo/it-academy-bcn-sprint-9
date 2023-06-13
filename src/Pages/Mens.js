@@ -1,10 +1,13 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { Link} from "react-router-dom";
+
 
 const Mens = () => {
   const [fetchData, setFetchData] = useState([]);
   const [clothingItems, setClothingItems] = useState('');
+  
 
   useEffect(() => {
     axios
@@ -39,6 +42,9 @@ const Mens = () => {
               <div className="rating">
                 <div className="rate">Sold: {item.rating.count}</div>
                 <div className="rate">Rate: {item.rating.rate}</div>
+                <Link to={`/mens/${index}`}>
+                  to product
+                </Link>
               </div>
             </React.Fragment>
           ))}

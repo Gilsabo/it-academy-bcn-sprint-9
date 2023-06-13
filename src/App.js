@@ -6,6 +6,7 @@ import Women from "./Pages/Women";
 import Electronics from "./Pages/Electronics";
 import Jewelery from "./Pages/Jewelery";
 import { Link } from "react-router-dom";
+import Product from "./Pages/Product";
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mens" element={<Mens />} />
+        <Route path="/mens/:id" element={<Product />} />
         <Route path="/women" element={<Women />} />
         <Route path="/electronics" element={<Electronics />} />
         <Route path="/jewelery" element={<Jewelery />} />
