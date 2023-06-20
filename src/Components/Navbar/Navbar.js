@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import {ShoppingCart} from "phosphor-react"
 const Navbar = () => {
     return ( 
         <nav>
@@ -17,6 +18,9 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/jewelery">Jewelery</Link>
+            </li>
+            <li>
+              <Link to="/cart"><ShoppingCart /></Link>
             </li>
           </ul>
         </nav>

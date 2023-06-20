@@ -4,7 +4,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import AddToCart from "../Components/addToCart/addToCart";
 
+
+
 const Mens = () => {
+  
   const [fetchData, setFetchData] = useState([]);
   const [clothingItems, setClothingItems] = useState("");
 
@@ -40,7 +43,7 @@ const Mens = () => {
                 <div className="count">Sold: {item.rating.count}</div>
                 <div className="rate">Rate: {item.rating.rate}</div>
                 <Link to={`/mens/${item.id}`}>to product</Link>
-                <AddToCart />
+                <AddToCart itemId={item.id}/>
               </div>
             </React.Fragment>
           ))}

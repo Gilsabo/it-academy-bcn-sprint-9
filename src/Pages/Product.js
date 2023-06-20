@@ -2,9 +2,14 @@ import axios from "axios";
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
-import AddToCart from "../Components/addToCart/addToCart";
+import { ShopContext } from "../context/shop-context";
+import { useContext } from "react";
+
+
+
 
 const Product = () => {
+  const {addToCart, cartItem} = useContext(ShopContext)
   const { id } = useParams();
   const [fetchData, setFetchData] = useState([]);
   const [detailsIdProduct, setDetailsIdProduct] = useState([]);
@@ -27,6 +32,8 @@ const Product = () => {
 
   console.log(fetchData);
   console.log(detailsIdProduct);
+  console.log(cartItem)
+  
 
   return (
     <div>
@@ -53,10 +60,9 @@ const Product = () => {
             <div className="description">
               Description : {detailsIdProduct[0].description}
             </div>
-
             <Link to="/mens/">to products</Link>
           </div>
-          <AddToCart />
+          <button type="button" onClick={()=>addToCart(detailsIdProduct[0].id)}>Add to Cart</button>
         </div>
       )}
     </div>

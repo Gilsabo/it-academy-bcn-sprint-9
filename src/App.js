@@ -4,9 +4,10 @@ import Mens from "./Pages/Mens";
 import Women from "./Pages/Women";
 import Electronics from "./Pages/Electronics";
 import Jewelery from "./Pages/Jewelery";
-
 import Product from "./Pages/Product";
 import Navbar from "./Components/Navbar/Navbar";
+import ShoppingCart from "./Pages/ShoppingCart";
+import ShopContextProvider from "./context/shop-context";
 
 function App() {
   return (
@@ -16,17 +17,20 @@ function App() {
         <h3>Outfits and complements to start your career as a Youtuber</h3>
         <Navbar />
       </div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/mens" element={<Mens />} />
-        <Route path="/mens/:id" element={<Product />} />
-        <Route path="/women" element={<Women />} />
-        <Route path="/women/:id" element={<Product />} />
-        <Route path="/electronics" element={<Electronics />} />
-        <Route path="/electronics/:id" element={<Product />} />
-        <Route path="/jewelery" element={<Jewelery />} />
-        <Route path="/jewelery/:id" element={<Product />} />
-      </Routes>
+      <ShopContextProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/mens" element={<Mens />} />
+          <Route path="/mens/:id" element={<Product />} />
+          <Route path="/women" element={<Women />} />
+          <Route path="/women/:id" element={<Product />} />
+          <Route path="/electronics" element={<Electronics />} />
+          <Route path="/electronics/:id" element={<Product />} />
+          <Route path="/jewelery" element={<Jewelery />} />
+          <Route path="/jewelery/:id" element={<Product />} />
+          <Route path="/cart" element={<ShoppingCart />} />
+        </Routes>
+      </ShopContextProvider>
     </>
   );
 }

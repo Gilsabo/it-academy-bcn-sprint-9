@@ -42,7 +42,7 @@ const Women = () => {
                 <div className="rate">Sold: {item.rating.count}</div>
                 <div className="rate">Rate: {item.rating.rate}</div>
                 <Link to={`/electronics/${item.id}`}>to product</Link>
-                <AddToCart />
+                <AddToCart itemId={item.id}/>
               </div>
             </React.Fragment>
           ))}
