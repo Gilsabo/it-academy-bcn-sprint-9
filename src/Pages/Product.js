@@ -5,11 +5,8 @@ import { useState } from "react";
 import { ShopContext } from "../context/shop-context";
 import { useContext } from "react";
 
-
-
-
 const Product = () => {
-  const {addToCart, cartItem} = useContext(ShopContext)
+  const { addToCart, cartItem } = useContext(ShopContext);
   const { id } = useParams();
   const [fetchData, setFetchData] = useState([]);
   const [detailsIdProduct, setDetailsIdProduct] = useState([]);
@@ -32,8 +29,7 @@ const Product = () => {
 
   console.log(fetchData);
   console.log(detailsIdProduct);
-  console.log(cartItem)
-  
+  console.log(cartItem);
 
   return (
     <div>
@@ -62,7 +58,15 @@ const Product = () => {
             </div>
             <Link to="/mens/">to products</Link>
           </div>
-          <button type="button" onClick={()=>addToCart(detailsIdProduct[0].id)}>Add to Cart</button>
+          <button
+            type="button"
+            onClick={() => addToCart(detailsIdProduct[0].id)}
+          >
+            Add to Cart{" "}
+            {cartItem[detailsIdProduct[0].id] > 0
+              ? `(${cartItem[detailsIdProduct[0].id]})`
+              : null}
+          </button>
         </div>
       )}
     </div>

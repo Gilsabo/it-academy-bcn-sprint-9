@@ -1,7 +1,40 @@
+import axios from "axios";
+import { useEffect, useState, useContext } from "react";
+import { ShopContext } from "../context/shop-context";
+import CartItem from "../Components/CartItem/CartItem";
 const ShoppingCart = () => {
-    return ( 
-        <h1>Shopping cart</h1>
-     );
-}
- 
+  const [fetchData, setFetchData] = useState([]);
+  const { cartItem } = useContext(ShopContext);
+
+  useEffect(() => {
+    axios
+      .get("https://fakestoreapi.com/products")
+      .then((response) => {
+        setFetchData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  console.log(fetchData);
+  console.log(cartItem);
+
+  return (
+    <>
+      <h1>Shopping cart</h1>
+      <div className="item">
+        {fetchData.map((item) => {
+          if (cartItem[item.id] !== 0) return <CartItem item={item} />;
+        })}
+      </div>
+      <div className="checkout">
+        <p>subtotal: $</p>
+        <button> Continue Shopping</button>
+        <button>Checkout</button>
+      </div>
+    </>
+  );
+};
+
 export default ShoppingCart;
