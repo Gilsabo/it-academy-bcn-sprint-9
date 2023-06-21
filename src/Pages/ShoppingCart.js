@@ -4,7 +4,8 @@ import { ShopContext } from "../context/shop-context";
 import CartItem from "../Components/CartItem/CartItem";
 const ShoppingCart = () => {
   const [fetchData, setFetchData] = useState([]);
-  const { cartItem } = useContext(ShopContext);
+  const { cartItem, getTotalCartAmount  } = useContext(ShopContext);
+  const totalAmount = getTotalCartAmount()
 
   useEffect(() => {
     axios
@@ -20,6 +21,8 @@ const ShoppingCart = () => {
   console.log(fetchData);
   console.log(cartItem);
 
+console.log(totalAmount)
+
   return (
     <>
       <h1>Shopping cart</h1>
@@ -29,7 +32,7 @@ const ShoppingCart = () => {
         })}
       </div>
       <div className="checkout">
-        <p>subtotal: $</p>
+        <p>subtotal: {totalAmount} $</p>
         <button> Continue Shopping</button>
         <button>Checkout</button>
       </div>

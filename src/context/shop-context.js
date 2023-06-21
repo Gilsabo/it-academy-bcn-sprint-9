@@ -8,6 +8,9 @@ const ShopContextProvider = (props) => {
   const [fetchData, setFetchData] = useState([]);
   const [cartItem, setCartItem] = useState({});
 
+ 
+
+
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products")
@@ -46,7 +49,31 @@ const ShopContextProvider = (props) => {
     setCartItem ((prev)=>({...prev, [itemId]:newAmount}))
   }
 
-  const contextValue = { cartItem, addToCart, removeFromCart, updateCartItemCount };
+  const getTotalCartAmount = () =>{
+    let totalAmount = 0
+    for (const product in cartItem){
+        if(cartItem[product]>0){
+            console.log(product)
+            console.log(cartItem)
+            console.log(fetchData)
+            console.log(cartItem[product])
+            let itemInfo = fetchData.find((item)=> item.id === Number(product))
+            
+            console.log(product)
+            console.log(itemInfo)
+            totalAmount += cartItem[product] * itemInfo.price
+            
+        }
+    }
+    return totalAmount
+  }
+
+
+
+
+
+
+  const contextValue = { cartItem, addToCart, removeFromCart, updateCartItemCount, getTotalCartAmount  };
 
   return (
     <ShopContext.Provider value={contextValue}>
