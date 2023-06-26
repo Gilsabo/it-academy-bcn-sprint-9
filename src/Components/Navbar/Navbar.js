@@ -22,6 +22,12 @@ const Navbar = () => {
             <li>
               <Link to="/cart"><ShoppingCart /></Link>
             </li>
+            <li>
+              <Link to="/signin">Sign in</Link>
+            </li>
+            <li>
+              <Link to="/signup">Sign up</Link>
+            </li>
           </ul>
         </nav>
      );
