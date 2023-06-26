@@ -68,10 +68,6 @@ const ShopContextProvider = (props) => {
   }
 
 
-
-
-
-
   const contextValue = { cartItem, addToCart, removeFromCart, updateCartItemCount, getTotalCartAmount  };
 
   return (
