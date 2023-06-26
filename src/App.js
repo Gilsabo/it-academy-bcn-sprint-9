@@ -8,6 +8,8 @@ import Product from "./Pages/Product";
 import Navbar from "./Components/Navbar/Navbar";
 import ShoppingCart from "./Pages/ShoppingCart";
 import ShopContextProvider from "./context/shop-context";
+import Signin from "./Components/Signin/Signin.js"
+import Signup from "./Components/Signup/Signup.js"
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="/jewelery" element={<Jewelery />} />
           <Route path="/jewelery/:id" element={<Product />} />
           <Route path="/cart" element={<ShoppingCart />} />
+          <Route path="/signin" element={<Signin />}/>
+          <Route path="/signup" element={<Signup />}/>
         </Routes>
       </ShopContextProvider>
     </>
