@@ -28,6 +28,9 @@ const Navbar = () => {
             <li>
               <Link to="/signup">Sign up</Link>
             </li>
+            <li>
+              <Link to="/account">Account</Link>
+            </li>
           </ul>
         </nav>
      );

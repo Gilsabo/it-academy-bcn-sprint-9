@@ -11,6 +11,7 @@ import ShopContextProvider from "./context/shop-context";
 import Signin from "./Components/Signin/Signin.js";
 import Signup from "./Components/Signup/Signup.js";
 import { AuthContextProvider } from "./context/Auth-context";
+import Account from "./Components/Account/Account";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path="/cart" element={<ShoppingCart />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/account" element={<Account />} />
           </Routes>
         </AuthContextProvider>
       </ShopContextProvider>
