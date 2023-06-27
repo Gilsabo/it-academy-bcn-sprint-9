@@ -8,8 +8,9 @@ import Product from "./Pages/Product";
 import Navbar from "./Components/Navbar/Navbar";
 import ShoppingCart from "./Pages/ShoppingCart";
 import ShopContextProvider from "./context/shop-context";
-import Signin from "./Components/Signin/Signin.js"
-import Signup from "./Components/Signup/Signup.js"
+import Signin from "./Components/Signin/Signin.js";
+import Signup from "./Components/Signup/Signup.js";
+import { AuthContextProvider } from "./context/Auth-context";
 
 function App() {
   return (
@@ -20,20 +21,22 @@ function App() {
         <Navbar />
       </div>
       <ShopContextProvider>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/mens" element={<Mens />} />
-          <Route path="/mens/:id" element={<Product />} />
-          <Route path="/women" element={<Women />} />
-          <Route path="/women/:id" element={<Product />} />
-          <Route path="/electronics" element={<Electronics />} />
-          <Route path="/electronics/:id" element={<Product />} />
-          <Route path="/jewelery" element={<Jewelery />} />
-          <Route path="/jewelery/:id" element={<Product />} />
-          <Route path="/cart" element={<ShoppingCart />} />
-          <Route path="/signin" element={<Signin />}/>
-          <Route path="/signup" element={<Signup />}/>
-        </Routes>
+        <AuthContextProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/mens" element={<Mens />} />
+            <Route path="/mens/:id" element={<Product />} />
+            <Route path="/women" element={<Women />} />
+            <Route path="/women/:id" element={<Product />} />
+            <Route path="/electronics" element={<Electronics />} />
+            <Route path="/electronics/:id" element={<Product />} />
+            <Route path="/jewelery" element={<Jewelery />} />
+            <Route path="/jewelery/:id" element={<Product />} />
+            <Route path="/cart" element={<ShoppingCart />} />
+            <Route path="/signin" element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </AuthContextProvider>
       </ShopContextProvider>
     </>
   );
