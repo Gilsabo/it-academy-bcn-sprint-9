@@ -66,13 +66,13 @@ console.log(titleCategory)
             <div className="description">
               Description : {detailsIdProduct[0].description}
             </div>
-            <Link to="/mens/">to products</Link>
+            <Link to="/">to products</Link>
           </div>
           <button
             type="button"
             onClick={() => addToCart(detailsIdProduct[0].id)}
           >
-            Add to Cart{" "}
+            Add to Shopping Cart{" "}
             {cartItem[detailsIdProduct[0].id] > 0
               ? `(${cartItem[detailsIdProduct[0].id]})`
               : null}
