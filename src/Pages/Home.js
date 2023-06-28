@@ -14,6 +14,9 @@ const Home = () => {
         <Link to="/jewelery">
         <button>Jewelery</button>
         </Link>
+        <Link to="/jewelery">
+        <button>Jewelery</button>
+        </Link>
         </>
      );
 }
