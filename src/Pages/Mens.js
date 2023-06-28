@@ -33,19 +33,19 @@ const Mens = () => {
     <div>
       <h1>Men's clothing </h1>
       {clothingItems && (
-        <div className="product">
-          {clothingItems.map((item, index) => (
-            <React.Fragment key={index}>
+        <div className="products">
+        {clothingItems.map((item, index) => (
+          <React.Fragment key={index}>
+            <div className="product">
               <img src={item.image} alt="cloth" style={{ width: "200px" }} />
               <div className="title">Product: {item.title}</div>
               <div className="price">Price: {item.price} euros</div>
-              <div className="rating">
-                <div className="count">Sold: {item.rating.count}</div>
-                <div className="rate">Rate: {item.rating.rate}</div>
+              <div className="link">
                 <Link to={`/mens/${item.id}`}>to product</Link>
-                <AddToCart itemId={item.id}/>
               </div>
-            </React.Fragment>
+              <AddToCart itemId={item.id} />
+            </div>
+          </React.Fragment>
           ))}
         </div>
       )}

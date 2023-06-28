@@ -39,7 +39,7 @@ const Women = () => {
                 <img src={item.image} alt="cloth" style={{ width: "200px" }} />
                 <div className="title">Product: {item.title}</div>
                 <div className="price">Price: {item.price} euros</div>
-                <div className="rating">
+                <div className="link">
                   <Link to={`/jewelery/${item.id}`}>to product</Link>
                 </div>
                 <AddToCart itemId={item.id} />
