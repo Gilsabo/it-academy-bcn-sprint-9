@@ -10,6 +10,7 @@ const Product = () => {
   const { id } = useParams();
   const [fetchData, setFetchData] = useState([]);
   const [detailsIdProduct, setDetailsIdProduct] = useState([]);
+  const [titleCategory, setTitleCategory] = useState('')
 
   useEffect(() => {
     axios
@@ -25,15 +26,24 @@ const Product = () => {
   useEffect(() => {
     const filtered = fetchData.filter((data) => data.id === parseInt(id));
     setDetailsIdProduct(filtered);
-  }, [fetchData]);
+    setTitleCategory(
+      filtered[0]?.category
+        ? filtered[0].category.charAt(0).toUpperCase() + filtered[0].category.slice(1)
+        : ""
+    )
+    console.log(filtered)
+  }, [fetchData,id]);
 
   console.log(fetchData);
   console.log(detailsIdProduct);
   console.log(cartItem);
 
+
+console.log(titleCategory)
+
   return (
     <div>
-      <h1>Men's clothing </h1>
+      <h1>{ titleCategory }</h1>
       {detailsIdProduct.length > 0 && (
         <div className="product">
           <img
