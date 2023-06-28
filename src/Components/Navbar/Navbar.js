@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import {ShoppingCart} from "phosphor-react"
+import Account from "../Account/Account";
 const Navbar = () => {
     return ( 
         <nav>
@@ -29,7 +30,7 @@ const Navbar = () => {
               <Link to="/signup">Sign up</Link>
             </li>
             <li>
-              <Link to="/account">Account</Link>
+              <Account />
             </li>
           </ul>
         </nav>
