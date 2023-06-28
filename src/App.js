@@ -17,13 +17,15 @@ import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
 function App() {
   return (
     <>
+    <AuthContextProvider>
       <div className="Header">
         <h1>YouTooShop</h1>
         <h3>Outfits and complements to start your career as a Youtuber</h3>
         <Navbar />
+        
       </div>
       <ShopContextProvider>
-        <AuthContextProvider>
+        
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/mens" element={<Mens />} />
@@ -37,10 +39,11 @@ function App() {
             <Route path="/cart" element={<ProtectedRoute><ShoppingCart /></ProtectedRoute>} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/account" element={<Account />} />
+            
           </Routes>
-        </AuthContextProvider>
+        
       </ShopContextProvider>
+      </AuthContextProvider>
     </>
   );
 }
