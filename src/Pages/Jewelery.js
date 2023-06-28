@@ -32,17 +32,17 @@ const Women = () => {
     <div>
       <h1>Jewelery </h1>
       {clothingItems && (
-        <div className="product">
+        <div className="products">
           {clothingItems.map((item, index) => (
             <React.Fragment key={index}>
-              <img src={item.image} alt="cloth" style={{ width: "200px" }} />
-              <div className="title">Product: {item.title}</div>
-              <div className="price">Price: {item.price} euros</div>
-              <div className="rating">
-                <div className="rate">Sold: {item.rating.count}</div>
-                <div className="rate">Rate: {item.rating.rate}</div>
-                <Link to={`/jewelery/${item.id}`}>to product</Link>
-                <AddToCart itemId={item.id}/>
+              <div className="product">
+                <img src={item.image} alt="cloth" style={{ width: "200px" }} />
+                <div className="title">Product: {item.title}</div>
+                <div className="price">Price: {item.price} euros</div>
+                <div className="rating">
+                  <Link to={`/jewelery/${item.id}`}>to product</Link>
+                </div>
+                <AddToCart itemId={item.id} />
               </div>
             </React.Fragment>
           ))}
