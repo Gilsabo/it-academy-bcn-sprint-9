@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState, useContext } from "react";
 import { ShopContext } from "../context/shop-context";
 import CartItem from "../Components/CartItem/CartItem";
+import { Link } from "react-router-dom";
 const ShoppingCart = () => {
   const [fetchData, setFetchData] = useState([]);
   const { cartItem, getTotalCartAmount  } = useContext(ShopContext);
@@ -33,7 +34,8 @@ console.log(totalAmount)
       </div>
       <div className="checkout">
         <p>subtotal: {totalAmount} $</p>
-        <button> Continue Shopping</button>
+        <Link to="/"><button> Continue Shopping</button></Link>
+        
         <button>Checkout</button>
       </div>
     </>
