@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
+import electronics from "images/electronics.jpg"
 const Home = () => {
     return ( 
         <>
+        <img src={electronics} alt="electronics" />
         <Link to="/mens">
         <button>Men's Clothing</button>
         </Link>
