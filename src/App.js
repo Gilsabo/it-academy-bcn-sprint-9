@@ -12,14 +12,15 @@ import Signin from "./Components/Signin/Signin.js";
 import Signup from "./Components/Signup/Signup.js";
 import { AuthContextProvider } from "./context/Auth-context";
 import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
+import "./App.css"
 
 function App() {
   return (
     <>
       <AuthContextProvider>
-        <div className="Header">
-          <h1>YouTooShop</h1>
-          <h3>Outfits and complements to start your career as a Youtuber</h3>
+        <div className="header">
+          <h1 className="title">YouTooShop</h1>
+          <h3 className="subtitle">Outfits and complements to start your career as a Youtuber</h3>
           <Navbar />
         </div>
         <ShopContextProvider>

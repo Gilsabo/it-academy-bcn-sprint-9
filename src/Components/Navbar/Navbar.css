@@ -1,0 +1,20 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.link-nav{
+    text-decoration: none
+}
+
+.nav-left-side,.nav-right-side{
+    
+    list-style-type:none;
+}
+
+.links{
+    display: flex;
+}
+
+.nav-left-side{
+    display: flex;
+}
