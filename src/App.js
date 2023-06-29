@@ -11,38 +11,68 @@ import ShopContextProvider from "./context/shop-context";
 import Signin from "./Components/Signin/Signin.js";
 import Signup from "./Components/Signup/Signup.js";
 import { AuthContextProvider } from "./context/Auth-context";
-import Account from "./Components/Account/Account";
 import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
 
 function App() {
   return (
     <>
-    <AuthContextProvider>
-      <div className="Header">
-        <h1>YouTooShop</h1>
-        <h3>Outfits and complements to start your career as a Youtuber</h3>
-        <Navbar />
-        
-      </div>
-      <ShopContextProvider>
-        
+      <AuthContextProvider>
+        <div className="Header">
+          <h1>YouTooShop</h1>
+          <h3>Outfits and complements to start your career as a Youtuber</h3>
+          <Navbar />
+        </div>
+        <ShopContextProvider>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/mens" element={<Mens />} />
-            <Route path="/mens/:id" element={<ProtectedRoute><Product /></ProtectedRoute >} />
+            <Route
+              path="/mens/:id"
+              element={
+                <ProtectedRoute>
+                  <Product />
+                </ProtectedRoute>
+              }
+            />
             <Route path="/women" element={<Women />} />
-            <Route path="/women/:id" element={<ProtectedRoute><Product /></ProtectedRoute>} />
+            <Route
+              path="/women/:id"
+              element={
+                <ProtectedRoute>
+                  <Product />
+                </ProtectedRoute>
+              }
+            />
             <Route path="/electronics" element={<Electronics />} />
-            <Route path="/electronics/:id" element={<ProtectedRoute><Product /></ProtectedRoute>} />
+            <Route
+              path="/electronics/:id"
+              element={
+                <ProtectedRoute>
+                  <Product />
+                </ProtectedRoute>
+              }
+            />
             <Route path="/jewelery" element={<Jewelery />} />
-            <Route path="/jewelery/:id" element={<ProtectedRoute><Product /></ProtectedRoute>} />
-            <Route path="/cart" element={<ProtectedRoute><ShoppingCart /></ProtectedRoute>} />
+            <Route
+              path="/jewelery/:id"
+              element={
+                <ProtectedRoute>
+                  <Product />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/cart"
+              element={
+                <ProtectedRoute>
+                  <ShoppingCart />
+                </ProtectedRoute>
+              }
+            />
             <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
-            
           </Routes>
-        
-      </ShopContextProvider>
+        </ShopContextProvider>
       </AuthContextProvider>
     </>
   );
