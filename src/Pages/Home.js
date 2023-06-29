@@ -1,26 +1,39 @@
 import { Link } from "react-router-dom";
-import electronics from "images/electronics.jpg"
+import mens from "../images/mens.jpg";
+import womens from "../images/women.jpg";
+import electronics from "../images/electronics.jpg";
+import jewelery from "../images/jewelery.jpg";
+import "./Home.css"
+
 const Home = () => {
-    return ( 
-        <>
-        <img src={electronics} alt="electronics" />
+  return (
+    <>
+      <div className="mens-box product-box">
         <Link to="/mens">
-        <button>Men's Clothing</button>
+          <button className="button-box">Men's Clothing</button>
         </Link>
+        <img className="image-home" src={mens} alt="electronics" />
+      </div>
+      <div className="womens-box product-box">
         <Link to="/women">
-        <button>Women's Clothing</button>
+          <button className="button-box">Women's Clothing</button>
         </Link>
+        <img className="image-home" src={womens} alt="womens" />
+      </div>
+      <div className="electronics-box product-box">
         <Link to="/electronics">
-        <button>Electronics</button>
+          <button className="button-box">Electronics</button>
         </Link>
+        <img className="image-home" src={electronics} alt="electronics" />
+      </div>
+      <div className="jewelery-box product-box">
         <Link to="/jewelery">
-        <button>Jewelery</button>
+          <button className="button-box">Jewelery</button>
         </Link>
-        <Link to="/jewelery">
-        <button>Jewelery</button>
-        </Link>
-        </>
-     );
-}
- 
+        <img className="image-home" src={jewelery} alt="electronics" />
+      </div>
+    </>
+  );
+};
+
 export default Home;
