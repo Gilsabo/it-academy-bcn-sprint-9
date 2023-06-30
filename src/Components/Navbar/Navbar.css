@@ -1,14 +1,25 @@
 .navbar{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+
+
+
 .link-nav{
-    text-decoration: none
+    text-decoration: none;
+    color: white;
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 1rem;
+    
+    
 }
 
 .nav-left-side,.nav-right-side{
     
     list-style-type:none;
+    
 }
 
 .links{
