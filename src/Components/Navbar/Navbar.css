@@ -13,7 +13,10 @@
     border-radius: 5px;
     padding: 1rem;
     
-    
+}
+
+.account{
+    border: none;
 }
 
 .nav-left-side,.nav-right-side{

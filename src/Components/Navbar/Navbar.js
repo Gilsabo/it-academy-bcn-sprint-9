@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
 import Account from "../Account/Account";
 import "./Navbar.css";
+import { UserAuth } from "../../context/Auth-context";
 const Navbar = () => {
+  const { user } = UserAuth();
+
   return (
     <nav className="navbar">
       <ul className="nav-left-side">
@@ -38,23 +41,32 @@ const Navbar = () => {
         </li>
       </ul>
       <ul className="nav-right-side">
-        <div className="links">
-          <li>
-            <Link className="link-nav" to="/signin">
-              Sign in
-            </Link>
-          </li>
-          <li>
-            <Link className="link-nav" to="/signup">
-              Sign up
-            </Link>
-          </li>
-        </div>
-        <div className="account">
-          <li className="link-nav">
-            <Account />
-          </li>
-        </div>
+        {!user ? (
+          <div className="links">
+            <li>
+              <Link className="link-nav" to="/signin">
+                Sign in
+              </Link>
+            </li>
+            <li>
+              <Link className="link-nav" to="/signup">
+                Sign up
+              </Link>
+            </li>
+          </div>
+        ) : (
+          ""
+        )}
+
+        {user ? (
+          <div className="account">
+            <li className="link-nav account">
+              <Account />
+            </li>
+          </div>
+        ) : (
+          ""
+        )}
       </ul>
     </nav>
   );
