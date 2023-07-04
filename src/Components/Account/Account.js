@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../../context/Auth-context";
+import "./Account.css"
 const Account = () => {
   const { user, logout } = UserAuth();
   const navigate = useNavigate();
@@ -14,10 +15,10 @@ const Account = () => {
   return (
     <>
       {user ? (
-        <>
-          <div>User Email:{user && user.email}</div>
-          <button onClick={handleLogOut}>Logout</button>
-        </>
+        <div className="login-section">
+          <div>User:{user && user.email}</div>
+          <button className="logout-button" onClick={handleLogOut}>Logout</button>
+        </div>
       ) : (
         ""
       )}

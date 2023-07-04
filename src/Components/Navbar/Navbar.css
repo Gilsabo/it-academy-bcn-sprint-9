@@ -9,12 +9,17 @@
 .link-nav{
     text-decoration: none;
     color: white;
-    border: 1px white solid;
-    border-radius: 5px;
-    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+    margin:0 1rem 0 1rem;
+    font-size: 1rem;
+    letter-spacing: .2rem;
     
 }
+.link-nav:hover{
 
+color: black;
+
+}
 .account{
     border: none;
 }
@@ -31,4 +36,8 @@
 
 .nav-left-side{
     display: flex;
+    margin: 1rem;
+}
+.nav-right-side{
+    margin-right: 2.5rem;
 }
