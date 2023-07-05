@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
+import "./CartItem.css"
 
 const CartItem = ({ item }) => {
   
@@ -13,9 +14,9 @@ const CartItem = ({ item }) => {
         <div>{item.title}</div>
       </div>
       <div className="countHandler">
-        <button onClick={()=>removeFromCart(item.id)}>-</button>
-        <input value={cartItem[item.id]} onChange={(e)=>updateCartItemCount(Number(e.target.value), item.id)}/>
-        <button onClick={()=>addToCart(item.id)}>+</button>
+        <button className="button-cart" onClick={()=>removeFromCart(item.id)}>-</button>
+        <input className="input-quantity"value={cartItem[item.id]} onChange={(e)=>updateCartItemCount(Number(e.target.value), item.id)}/>
+        <button className="button-cart" onClick={()=>addToCart(item.id)}>+</button>
       </div>
     </>
   );

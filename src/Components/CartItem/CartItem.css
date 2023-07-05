@@ -1,0 +1,19 @@
+.input-quantity{
+    width: 8%;
+    height: 10%;
+    text-align: center;
+}
+.button-cart{
+    all: unset;
+    cursor: pointer;
+    width: 2rem;
+    border: 2px solid black;
+    text-align: center;
+    height: 2.4rem;
+}
+.button-cart:hover{
+    color:white;
+    
+    background-color: black;
+
+}
