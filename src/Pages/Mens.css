@@ -1,0 +1,32 @@
+.products{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    margin-bottom: 1rem;
+    
+}
+
+.image-container {
+    height: 200px; /* Adjust the height as needed */
+    width: 100%;
+    overflow: hidden;
+  }
+
+.image-of-product{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.name-of-product{
+    text-align: center;
+
+}

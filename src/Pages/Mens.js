@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import AddToCart from "../Components/addToCart/addToCartButton";
+import "./Mens.css"
 
 
 
@@ -37,8 +38,11 @@ const Mens = () => {
         {clothingItems.map((item, index) => (
           <React.Fragment key={index}>
             <div className="product">
-              <img src={item.image} alt="cloth" style={{ width: "200px" }} />
-              <div className="title">Product: {item.title}</div>
+              <div className="image-container">
+                <img className="image-of-product" src={item.image} alt="cloth"  />
+              </div>
+              <div className="title">Product:</div>
+              <div className="name-of-product">{item.title}</div>
               <div className="price">Price: {item.price} euros</div>
               <div className="link">
                 <Link to={`/mens/${item.id}`}>to product</Link>
