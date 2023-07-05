@@ -1,3 +1,8 @@
+.header-product{
+  text-align: center;
+  letter-spacing: .2rem;
+  margin-bottom: 4rem;
+}
 .products{
     display: flex;
   flex-wrap: wrap;

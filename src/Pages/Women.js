@@ -31,7 +31,7 @@ const Women = () => {
 
   return (
     <div>
-      <h1>Women's clothing </h1>
+      <h1 className="header-product">Women's clothing </h1>
       {clothingItems && (
         <div className="products">
         {clothingItems.map((item, index) => (
