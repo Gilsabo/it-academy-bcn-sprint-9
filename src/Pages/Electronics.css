@@ -1,7 +1,7 @@
 .header-product{
-    text-align: center;
-    letter-spacing: .2rem;
-    margin-bottom: 4rem;
+  text-align: center;
+  letter-spacing: .2rem;
+  margin-bottom: 4rem;
 }
 .products{
     display: flex;
@@ -19,7 +19,7 @@
 }
 
 .image-container {
-    height: 200px; /* Adjust the height as needed */
+    height: 200px; 
     width: 100%;
     overflow: hidden;
   }
