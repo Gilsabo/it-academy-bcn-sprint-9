@@ -1,0 +1,41 @@
+.shopping-cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .header-cart {
+    letter-spacing: 0.2rem;
+    margin-bottom: 4rem;
+  }
+  
+
+  
+  .button-shopping {
+    all: unset;
+    cursor: pointer;
+    border: 3px solid black;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-top: 0.5rem;
+  }
+  
+  .button-shopping:hover {
+    border: 3px solid white;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+  
+  .link-shopping {
+    text-decoration: none;
+    color: black;
+  }
+
+  .items{
+    width: 100%;
+  }
+  
