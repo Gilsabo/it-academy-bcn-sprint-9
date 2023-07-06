@@ -35,3 +35,24 @@
     text-align: center;
 
 }
+@media screen and (max-width: 768px) {
+    
+  .product {
+    width: 50%;
+  }
+
+  .image-of-product {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  
+  .product {
+    width: 100%;
+  }
+
+  .image-of-product {
+    width: 80%;
+  }
+}
