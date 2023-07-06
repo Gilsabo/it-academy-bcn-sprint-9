@@ -1,6 +1,4 @@
-*{
-    font-family: 'Roboto', sans-serif;
-}
+
 .main-box{
     display: flex;
     justify-content: space-around;
@@ -49,7 +47,7 @@ input{
 .sign-in-button{
     
         margin-top: 1.5rem;
-       width: 15%;
+       width: 200px;
       align-items: center;
       background-color: #fff;
       border-radius: 12px;
@@ -79,4 +77,45 @@ input{
     .sign-in-button:hover {
       box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
     }
+
+    @media screen and (max-width: 768px) {
+        .main-box{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+      }
+      .input-login{
+        margin: 0 auto;
+      }
+      .sign-in-button{
+         margin: 0 auto;
+         margin-top: 10px;
+         width: 200px;
+         
+      }
+    }
+      
+      @media screen and (max-width: 480px) {
+        .main-box{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+      }
+      .input-login{
+        margin: 0 auto;
+      }
+      .sign-in-button{
+         margin: 0 auto;
+         margin-top: 10px;
+         width: 100px;
+        
+         
+      }
+       
+    }
+
     

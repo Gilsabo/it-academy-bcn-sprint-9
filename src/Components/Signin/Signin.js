@@ -36,9 +36,10 @@ const Signin = () => {
         </p>
         <form onSubmit={handleSubmit}>
           <label htmlFor="user">Email adress</label>
-          <input onChange={(e) => setEmail(e.target.value)} type="email" />
+          <input className="input-login"  onChange={(e) => setEmail(e.target.value)} type="email" />
           <label htmlFor="password">Password</label>
           <input
+          className="input-login" 
             type="password"
             onChange={(e) => setPassword(e.target.value)}
           />

@@ -34,10 +34,10 @@ const Signup = () => {
         </p>
         <form onSubmit={handleSubmit}>
           <label htmlFor="user">Email adress</label>
-          <input type="email" onChange={(e) => setEmail(e.target.value)} />
+          <input className="input-login" type="email" onChange={(e) => setEmail(e.target.value)} />
           <label htmlFor="password">Password</label>
           <input
-            type="password"
+            className="input-login" type="password"
             onChange={(e) => setPassword(e.target.value)}
           />
           <button className="sign-up-button">Sign up</button>
