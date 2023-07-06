@@ -1,9 +1,18 @@
-.navbar{
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
 
 
 .link-nav{
@@ -36,8 +45,34 @@ color: black;
 
 .nav-left-side{
     display: flex;
+    flex-wrap: wrap;
     margin: 1rem;
 }
 .nav-right-side{
     margin-right: 2.5rem;
+}
+
+.link-sign-in, .link-sign-up{
+    width: 115px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+  }
+
+  
+
+  .nav-left-side {
+    text-align: center;
+    margin: 0px;
+  }
+
+  .nav-right-side {
+    text-align: center;
+  }
+
+  .link-nav {
+    margin: 10px;
+  }
 }
